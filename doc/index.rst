@@ -16,13 +16,13 @@ and expose its documentation properly (using Swagger).
 Compatibility
 =============
 
-flask-restx requires Python 2.7+.
+Flask-RESTX requires Python 3.5+.
 
 
 Installation
 ============
 
-You can install flask-restx with pip:
+You can install Flask-RESTX with pip:
 
 .. code-block:: console
 
