@@ -8,7 +8,7 @@ Basic structure is
     ADD LINK (..) _section-VERSION
     VERSION
     -------
-    ADD LINK (..) _bug_fixes-VERSION OR _enhancments-VERSION
+    ADD LINK (..) _bug_fixes-VERSION OR _enhancements-VERSION
     Bug Fixes or Enchancements
     ~~~~~~~~~~~~~~~~~~~~~~~~~~
     * Message (TICKET) [CONTRIBUTOR]
@@ -35,7 +35,7 @@ Bug Fixes
 ::
 
    * Add python version requirement on setup.py (#586) [jason-the-j]
-
+   * Register models nested inside response fields (#613) [panda-byte]
 
 .. _section-1.3.0:
 1.3.0
