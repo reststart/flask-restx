@@ -1,4 +1,8 @@
-import zoneinfo
+try:
+    import zoneinfo
+except ImportError:
+    from backports import zoneinfo
+
 from collections import OrderedDict
 from datetime import date, datetime, timezone
 from decimal import Decimal
