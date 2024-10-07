@@ -72,8 +72,14 @@ class Rfc822DatetimeTest(object):
             ("Sat, 01 Jan 2011", datetime(2011, 1, 1, tzinfo=timezone.utc)),
             ("Sat, 01 Jan 2011 00:00", datetime(2011, 1, 1, tzinfo=timezone.utc)),
             ("Sat, 01 Jan 2011 00:00:00", datetime(2011, 1, 1, tzinfo=timezone.utc)),
-            ("Sat, 01 Jan 2011 00:00:00 +0000", datetime(2011, 1, 1, tzinfo=timezone.utc)),
-            ("Sat, 01 Jan 2011 00:00:00 -0000", datetime(2011, 1, 1, tzinfo=timezone.utc)),
+            (
+                "Sat, 01 Jan 2011 00:00:00 +0000",
+                datetime(2011, 1, 1, tzinfo=timezone.utc),
+            ),
+            (
+                "Sat, 01 Jan 2011 00:00:00 -0000",
+                datetime(2011, 1, 1, tzinfo=timezone.utc),
+            ),
             (
                 "Sat, 01 Jan 2011 23:59:59 -0000",
                 datetime(2011, 1, 1, 23, 59, 59, tzinfo=timezone.utc),
