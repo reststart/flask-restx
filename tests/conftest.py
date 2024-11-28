@@ -44,7 +44,7 @@ class TestClient(FlaskClient):
 
 @pytest.fixture
 def app():
-    app = Flask(__name__)
+    app = Flask(__name__, subdomain_matching=True)
     app.test_client_class = TestClient
     yield app
 

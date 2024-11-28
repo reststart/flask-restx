@@ -33,7 +33,7 @@ development and to support our users.
 Compatibility
 =============
 
-Flask-RESTX requires Python 3.8+.
+Flask-RESTX requires Python 3.9+.
 
 
 Installation

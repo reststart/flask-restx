@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11", "pypy3.8", "3.12"]
+        python-version: ["3.9", "3.10", "3.11", "pypy3.9", "3.12"]
         flask: ["<3.0.0", ">=3.0.0"]
     steps:
       - name: Set up Python ${{ matrix.python-version }}
@@ -41,10 +41,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     steps:
-      - name: Set up Python 3.8
+      - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
-          python-version: "3.8"
+          python-version: "3.9"
       - name: Checkout ${{ github.base_ref }}
         uses: actions/checkout@v3
         with:
