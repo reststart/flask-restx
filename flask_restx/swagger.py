@@ -680,6 +680,7 @@ class Swagger(object):
             return self.serialize_schema(model())
 
         elif isinstance(model, fields.Raw):
+            self.register_field(model)
             return model.__schema__
 
         elif isinstance(model, (type, type(None))) and model in PY_TYPES:
@@ -704,6 +705,12 @@ class Swagger(object):
         return ref(model)
 
     def register_field(self, field):
+        """
+        Traverse a "container" field (`Nested`, `List`, `Wildcard`,
+        and `Polymorph`) and register any nested models. Used for
+        models nested inside other models or responses using fields
+        for definition.
+        """
         if isinstance(field, fields.Polymorph):
             for model in field.mapping.values():
                 self.register_model(model)
